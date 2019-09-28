@@ -139,7 +139,7 @@ with open("output.html", "w", encoding="utf-8") as f:
     # Permutations generated = 39916800
     # compared to 11! which  = 39916800
     
-    """    
+        
     num_permutations = 0
     
     for p in get_fbn(11):
@@ -153,7 +153,7 @@ with open("output.html", "w", encoding="utf-8") as f:
     
     print_write(f," ")
     
-    """    
+       
     
     """
     

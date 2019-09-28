@@ -102,3 +102,6 @@ UnicodeEncodeError: 'charmap' codec can't encode character '\u2660' in position 
 
 Everything working except need to generate a 51 digit fbn at random.
 
+Done - posted on Rosetta Code.
+
+
