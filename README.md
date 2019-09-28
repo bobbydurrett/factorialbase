@@ -80,3 +80,10 @@ compared to 11! which  = 39916800
 
 takes a while to run.
 
+u"\u2665" - heart
+
+u"\u2660" - spade
+
+u"\u25C6" - diamond
+
+u"\u2663" - club
