@@ -86,6 +86,5 @@ omega=[0,1,2,3]
 four_list = get_fbn(4)
 
 for l in four_list:
-    print(str(l)+'->'+str(apply_perm(omega,l)))
-
+    print(str(l)+'->'+str(apply_perm(omega[:],l)))
 
