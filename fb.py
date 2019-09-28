@@ -139,7 +139,7 @@ with open("output.html", "w", encoding="utf-8") as f:
     # Permutations generated = 39916800
     # compared to 11! which  = 39916800
     
-    
+    """    
     num_permutations = 0
     
     for p in get_fbn(11):
@@ -153,7 +153,7 @@ with open("output.html", "w", encoding="utf-8") as f:
     
     print_write(f," ")
     
-    
+    """    
     
     """
     
@@ -179,8 +179,6 @@ with open("output.html", "w", encoding="utf-8") as f:
     
     p2 = [51,48,16,22,3,0,19,34,29,1,36,30,12,32,12,29,30,26,14,21,8,12,1,3,10,4,7,17,6,21,8,12,15,15,13,15,7,3,12,11,9,5,5,6,6,3,4,0,3,2,1]
     
-    myperm = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
-    
     print_write(f," ")
     print_write(f,dot_format(p1))
     print_write(f," ")
@@ -190,6 +188,18 @@ with open("output.html", "w", encoding="utf-8") as f:
     print_write(f,dot_format(p2))
     print_write(f," ")
     print_write(f,str_format(apply_perm(shoe[:],p2)))
+
+    # generate random 51 digit factorial based number
+    
+    import random
+    
+    max = math.factorial(52)
+    
+    random_int = random.randint(0, max-1)
+
+    myperm = leading_zeros(int_to_fbn(random_int),51)
+    
+    print(len(myperm))
     
     print_write(f," ")
     print_write(f,dot_format(myperm))
