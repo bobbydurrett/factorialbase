@@ -67,3 +67,16 @@ should be:
        
 checks out.
 
+Got this working:
+
+permutations so far = 35000000
+permutations so far = 36000000
+permutations so far = 37000000
+permutations so far = 38000000
+permutations so far = 39000000
+
+Permutations generated = 39916800
+compared to 11! which  = 39916800
+
+takes a while to run.
+

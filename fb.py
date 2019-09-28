@@ -70,16 +70,14 @@ def get_fbn(n):
     """
     max = math.factorial(n)
     
-    fbn_list = []
-    
     for i in range(max):
         # from Wikipedia article
         current = i
         divisor = 1
         new_fbn = int_to_fbn(i)
-        fbn_list.append(leading_zeros(new_fbn,n-1))
-        
-    return fbn_list
+        yield leading_zeros(new_fbn,n-1)
+    
+# first print list
     
 omega=[0,1,2,3]
 
@@ -87,4 +85,20 @@ four_list = get_fbn(4)
 
 for l in four_list:
     print(str(l)+'->'+str(apply_perm(omega[:],l)))
+
+# now generate this output:
+#
+# Permutations generated = 39916800
+# compared to 11! which  = 39916800
+
+num_permutations = 0
+
+for p in get_fbn(11):
+    num_permutations += 1
+    if num_permutations % 1000000 == 0:
+        print("permutations so far = "+str(num_permutations))
+
+print(" ")
+print("Permutations generated = "+str(num_permutations))
+print("compared to 11! which  = "+str(math.factorial(11)))
 
