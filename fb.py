@@ -6,7 +6,9 @@ https://en.wikipedia.org/wiki/Factorial_number_system
 
 """
 
-def apply_perm(omega,fbm):
+import math
+
+def apply_perm(omega,fbn):
     """
     
     omega contains a list which will be permuted (scrambled)
@@ -30,10 +32,60 @@ def apply_perm(omega,fbm):
             omega[m] = new_first
             
     return omega
+    
+def int_to_fbn(i):
+    """
+    
+    convert integer i to factorial based number
+    
+    """
+    current = i
+    divisor = 2
+    new_fbn = []
+    while current > 0:
+        remainder = current % divisor
+        current = current // divisor
+        new_fbn.append(remainder)
+        divisor += 1
+    
+    return list(reversed(new_fbn))
+    
+def leading_zeros(l,n):
+   """
+   
+   If list l has less than n elements returns l with enough 0 elements
+   in front of the list to make it length n.
+   
+   """
+   if len(l) < n:
+       return(([0] * (n - len(l))) + l)
+   else:
+       return l
 
+def get_fbn(n):
+    """
+    
+    Return the n! + 1 first Factorial Based Numbers starting with zero.
+            
+    """
+    max = math.factorial(n)
+    
+    fbn_list = []
+    
+    for i in range(max):
+        # from Wikipedia article
+        current = i
+        divisor = 1
+        new_fbn = int_to_fbn(i)
+        fbn_list.append(leading_zeros(new_fbn,n-1))
+        
+    return fbn_list
+    
 omega=[0,1,2,3]
-fbn=[2,0,1]
-      
-print(apply_perm(omega,fbn))
+
+four_list = get_fbn(4)
+
+for l in four_list:
+    print(str(l)+'->'+str(apply_perm(omega,l)))
 
 
