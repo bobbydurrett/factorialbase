@@ -100,3 +100,5 @@ Traceback (most recent call last):
     return codecs.charmap_encode(input,self.errors,encoding_table)[0]
 UnicodeEncodeError: 'charmap' codec can't encode character '\u2660' in position 3: character maps to <undefined>
 
+Everything working except need to generate a 51 digit fbn at random.
+
