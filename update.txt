@@ -1,0 +1,6 @@
+=={{header|Python}}==
+<lang python>
+</lang>
+{{out}}
+<pre>
+</pre>

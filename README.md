@@ -87,3 +87,16 @@ u"\u2660" - spade
 u"\u25C6" - diamond
 
 u"\u2663" - club
+
+All the logic is working but the unicode symbols won't print to a file.
+
+Getting this error:
+
+C:\bobby\rosettacode\factorialbase>fb.py > output.txt
+Traceback (most recent call last):
+  File "C:\bobby\rosettacode\factorialbase\fb.py", line 135, in <module>
+    print(shoe)
+  File "C:\Users\Bobby Durrett\AppData\Local\Programs\Python\Python37-32\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2660' in position 3: character maps to <undefined>
+

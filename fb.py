@@ -77,6 +77,7 @@ def get_fbn(n):
         new_fbn = int_to_fbn(i)
         yield leading_zeros(new_fbn,n-1)
     
+
 # first print list
     
 omega=[0,1,2,3]
@@ -85,12 +86,15 @@ four_list = get_fbn(4)
 
 for l in four_list:
     print(str(l)+'->'+str(apply_perm(omega[:],l)))
+    
+print(" ")
 
 # now generate this output:
 #
 # Permutations generated = 39916800
 # compared to 11! which  = 39916800
 
+"""
 num_permutations = 0
 
 for p in get_fbn(11):
@@ -101,4 +105,53 @@ for p in get_fbn(11):
 print(" ")
 print("Permutations generated = "+str(num_permutations))
 print("compared to 11! which  = "+str(math.factorial(11)))
+
+print(" ")
+
+"""
+
+"""
+
+u"\u2660" - spade
+
+u"\u2665" - heart
+
+u"\u2666" - diamond
+
+u"\u2663" - club
+
+39.49.7.47.29.30.2.12.10.3.29.37.33.17.12.31.29.34.17.25.2.4.25.4.1.14.20.6.21.18.1.1.1.4.0.5.15.12.4.3.10.10.9.1.6.5.5.3.0.0.0
+
+51.48.16.22.3.0.19.34.29.1.36.30.12.32.12.29.30.26.14.21.8.12.1.3.10.4.7.17.6.21.8.12.15.15.13.15.7.3.12.11.9.5.5.6.6.3.4.0.3.2.1
+
+"""
+
+shoe = []
+
+for suit in [u"\u2660",u"\u2665",u"\u2666",u"\u2663"]:
+    for value in ['A','K','Q','J','10','9','8','7','6','5','4','3','2']:
+        shoe.append(value+suit)
+                
+print(shoe)
+
+p1 = [39,49,7,47,29,30,2,12,10,3,29,37,33,17,12,31,29,34,17,25,2,4,25,4,1,14,20,6,21,18,1,1,1,4,0,5,15,12,4,3,10,10,9,1,6,5,5,3,0,0,0]
+
+p2 = [51,48,16,22,3,0,19,34,29,1,36,30,12,32,12,29,30,26,14,21,8,12,1,3,10,4,7,17,6,21,8,12,15,15,13,15,7,3,12,11,9,5,5,6,6,3,4,0,3,2,1]
+
+myperm = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+
+print(" ")
+print(p1)
+print(" ")
+print(apply_perm(shoe[:],p1))
+
+print(" ")
+print(p2)
+print(" ")
+print(apply_perm(shoe[:],p2))
+
+print(" ")
+print(myperm)
+print(" ")
+print(apply_perm(shoe[:],myperm))
 
